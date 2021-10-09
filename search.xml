@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>我的第一篇文章</title>
-    <url>/2021/10/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-        <category>博客</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/06/06/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -30,5 +17,106 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>做小part时的一些知识点</title>
+    <url>/2021/10/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h2 id="一-Character-Carousel"><a href="#一-Character-Carousel" class="headerlink" title="一.Character_Carousel"></a>一.Character_Carousel</h2><h3 id="1-letter-spacing属性"><a href="#1-letter-spacing属性" class="headerlink" title="1.letter-spacing属性"></a>1.<code>letter-spacing</code>属性</h3><p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
+<p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。</p>
+<p>语法：letter-spacing : normal | length | inherit ;</p>
+<p>属性值：</p>
+<p>●　normal：默认。规定字符间没有额外的空间。</p>
+<p>●　length：定义字符间的固定空间(允许使用负值)。</p>
+<p>●　inherit：规定应该从父元素继承 letter-spacing 属性的值。</p>
+<p>说明：该属性允许使用负值，这会让字母之间挤得更紧。</p>
+<p>注释：所有浏览器都支持 letter-spacing 属性。任何的版本的 Internet Explorer (包括 IE8)都不支持属性值 “inherit”。</p>
+<p>示例：</p>
+<p>h1 {letter-spacing: -10px}</p>
+<p>h3 {letter-spacing: normal}</p>
+<p>h4 {letter-spacing: 20px}</p>
+<h3 id="2-overflow属性"><a href="#2-overflow属性" class="headerlink" title="2.overflow属性"></a>2.<code>overflow</code>属性</h3><p>overflow 属性规定当内容溢出元素框时发生的事情。</p>
+<p>说明：这个属性定义溢出元素内容区的内容会如何处理。如果值为 scroll，不论是否需要，用户代理都会提供一种滚动机制。因此，有可能即使元素框中可以放下所有内容也会出现滚动条。</p>
+<p><strong>可能的值</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">visible</td>
+<td align="left">默认值。内容不会被修剪，会呈现在元素框之外。</td>
+</tr>
+<tr>
+<td align="left">hidden</td>
+<td align="left">内容会被修剪，并且其余内容是不可见的。</td>
+</tr>
+<tr>
+<td align="left">scroll</td>
+<td align="left">内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td align="left">auto</td>
+<td align="left">如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">规定应该从父元素继承 overflow 属性的值。</td>
+</tr>
+</tbody></table>
+<h3 id="3-box-sizing属性"><a href="#3-box-sizing属性" class="headerlink" title="3.box-sizing属性"></a>3.<code>box-sizing</code>属性</h3><p>box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。</p>
+<p>例如，假如您需要并排放置两个带边框的框，可通过将 box-sizing 设置为 “border-box”。这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中。</p>
+<p>语法：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html">box-sizing: content-box|border-box|inherit;<br></code></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">content-box</td>
+<td align="left">这是由 CSS2.1 规定的宽度高度行为。宽度和高度分别应用到元素的内容框。在宽度和高度之外绘制元素的内边距和边框。</td>
+</tr>
+<tr>
+<td align="left">border-box</td>
+<td align="left">为元素设定的宽度和高度决定了元素的边框盒。就是说，为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">规定应从父元素继承 box-sizing 属性的值。</td>
+</tr>
+</tbody></table>
+<h3 id="4-root选择器"><a href="#4-root选择器" class="headerlink" title="4.:root选择器"></a>4.<code>:root</code>选择器</h3><p>:root 选择器匹配<strong>文档根元素</strong>。</p>
+<p>在 HTML 中，根元素始终是 html 元素。</p>
+<h2 id="二-typewriting"><a href="#二-typewriting" class="headerlink" title="二.typewriting"></a>二.typewriting</h2><h3 id="1-css中的vh"><a href="#1-css中的vh" class="headerlink" title="1.css中的vh"></a>1.css中的vh</h3><p>css中的vh是一种视窗单位，也是相对单位。</p>
+<p>相对于视窗的高度。视窗被均分为100单位的vh。一般要想使背景填充整个页面都设置其为100vh。</p>
+<p>vh 优势在于能够直接获取高度，而用 % 在没有设置 body 高度的情况下，是无法正确获得可视区域的高度的。</p>
+<p>示例：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span>&#123;<span class="hljs-attribute">font-size</span>:<span class="hljs-number">8vh</span>;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如果视口的高度是200mm，那么上述代码中h1元素的字号将为16mm，即(8x200)/100</p>
+<h2 id="三-Character-Charging"><a href="#三-Character-Charging" class="headerlink" title="三.Character_Charging"></a>三.Character_Charging</h2><h3 id="1-css的新函式clamp"><a href="#1-css的新函式clamp" class="headerlink" title="1.css的新函式clamp()"></a>1.css的新函式<code>clamp()</code></h3><h2 id="四-Dynamic-Effects"><a href="#四-Dynamic-Effects" class="headerlink" title="四.Dynamic_Effects"></a>四.Dynamic_Effects</h2><h3 id="1-利用JS给一句话中每个字母都加上标签"><a href="#1-利用JS给一句话中每个字母都加上标签" class="headerlink" title="1.利用JS给一句话中每个字母都加上标签"></a>1.利用JS给一句话中每个字母都加上标签</h3><p>代码</p>
+<p>html部分：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./Dynamic_Effects.css&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Dynamic_Effects<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>CodingStartup<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./Dynamic_Effects.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>JS部分：</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 如果要为每个字母都套上标签，可以在html中手动加入，也可以在JS中直接加入</span><br><span class="hljs-keyword">const</span> h1 = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;h1&#x27;</span>)<br><span class="hljs-comment">// 这个是利用了正则表达式，\S代表搜寻每一个非空白的字元</span><br><span class="hljs-comment">// 透过.replace替换成加上了&lt;span&gt;标签的内容</span><br><span class="hljs-comment">// $&amp;代表正则中匹配到出来的模式（Pattern）</span><br>h1.innerHTML = h1.textContent.replace(<span class="hljs-regexp">/\S/g</span>, <span class="hljs-string">&quot;&lt;span&gt;$&amp;&lt;/span&gt;&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>这样就实现了利用JS给每个文字添加标签</p>
+<p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20210725153625141.png"  ><span class="image-caption">image-20210725153625141</span></p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>JavaScript</tag>
+        <tag>笔记</tag>
+      </tags>
   </entry>
 </search>
