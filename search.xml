@@ -20,7 +20,7 @@
   </entry>
   <entry>
     <title>做小part时的一些知识点</title>
-    <url>/2021/10/09/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <url>/2021/10/09/%E5%81%9A%E5%B0%8Fpart%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<h2 id="一-Character-Carousel"><a href="#一-Character-Carousel" class="headerlink" title="一.Character_Carousel"></a>一.Character_Carousel</h2><h3 id="1-letter-spacing属性"><a href="#1-letter-spacing属性" class="headerlink" title="1.letter-spacing属性"></a>1.<code>letter-spacing</code>属性</h3><p>letter-spacing 属性增加或减少字符间的空白（字符间距）。</p>
 <p>该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。</p>
 <p>语法：letter-spacing : normal | length | inherit ;</p>
