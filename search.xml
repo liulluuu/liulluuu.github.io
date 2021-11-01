@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>派森学习之旅</title>
+    <url>/2021/11/01/%E6%B4%BE%E6%A3%AE%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/</url>
+    <content><![CDATA[<h1 id="派森学习之旅"><a href="#派森学习之旅" class="headerlink" title="派森学习之旅"></a>派森学习之旅</h1><p>IDLE是一个Python Shell，shell的意思就是“外壳”，也就是一个通过键入文本与程序交互的途径。</p>
+<p><code>&gt;&gt;&gt;</code>这个提示符的含义是Python已经准备好了，等着输入端键入Python指令。</p>
+<p>在IDLE中利用快捷键<code>alt+N</code>即可快捷显示上一条命令；<code>alt+P</code>快捷显示下一条命令。新建窗口（new window）快捷键<code>Ctrl+N</code></p>
+<h2 id="一-Python3的常用语法"><a href="#一-Python3的常用语法" class="headerlink" title="一.Python3的常用语法"></a>一.Python3的常用语法</h2><ol>
+<li>字符串相加即为字符串相组合</li>
+</ol>
+<p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20211030180551342.png"  ><span class="image-caption">image-20211030180551342</span></p>
+<ol start="2">
+<li>变量不需要定义，直接赋值</li>
+</ol>
+<p>BIF == Built-in function（内置函数）</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>Python，后端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>做小part时的一些知识点</title>
     <url>/2021/10/09/%E5%81%9A%E5%B0%8Fpart%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
     <content><![CDATA[<p>在前端学习的过程中会有很多优质的博主，像是 Steven lei 的，跟着他们做前端页面可以学到更深层的css，也可以重新理解JavaScript，下边几个是我跟着做的小demo和相关的知识点。</p>
