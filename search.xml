@@ -3,17 +3,47 @@
   <entry>
     <title>派森学习之旅</title>
     <url>/2021/11/01/%E6%B4%BE%E6%A3%AE%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/</url>
-    <content><![CDATA[<h1 id="派森学习之旅"><a href="#派森学习之旅" class="headerlink" title="派森学习之旅"></a>派森学习之旅</h1><p>IDLE是一个Python Shell，shell的意思就是“外壳”，也就是一个通过键入文本与程序交互的途径。</p>
+    <content><![CDATA[<h1 id="派森学习之旅"><a href="#派森学习之旅" class="headerlink" title="派森学习之旅"></a>派森学习之旅</h1><p>[TOC]</p>
+<p>IDLE是一个Python Shell，shell的意思就是“外壳”，也就是一个通过键入文本与程序交互的途径。</p>
 <p><code>&gt;&gt;&gt;</code>这个提示符的含义是Python已经准备好了，等着输入端键入Python指令。</p>
 <p>在IDLE中利用快捷键<code>alt+N</code>即可快捷显示上一条命令；<code>alt+P</code>快捷显示下一条命令。新建窗口（new window）快捷键<code>Ctrl+N</code></p>
-<h2 id="一-Python3的常用语法"><a href="#一-Python3的常用语法" class="headerlink" title="一.Python3的常用语法"></a>一.Python3的常用语法</h2><ol>
-<li>字符串相加即为字符串相组合</li>
-</ol>
+<h2 id="一-实例讲解语法、函数"><a href="#一-实例讲解语法、函数" class="headerlink" title="一.实例讲解语法、函数"></a>一.实例讲解语法、函数</h2><h3 id="1-字符串"><a href="#1-字符串" class="headerlink" title="1.字符串"></a>1.字符串</h3><p>字符串相加即为字符串相组合</p>
 <p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20211030180551342.png"  ><span class="image-caption">image-20211030180551342</span></p>
-<ol start="2">
-<li>变量不需要定义，直接赋值</li>
-</ol>
+<p>字符串就是引号内的全部东西，也可以把字符串叫做文本，但是文本和数字截然不同</p>
+<p>在Python中创建字符串需要在字符两边加上引号，可以是单引号或者双引号，但是<strong>引号必须成对</strong>。</p>
+<p>字符串中需要出现单引号或者双引号的时候可以有两种方法</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-number">1.</span>使用转义符号（\）对字符串中的引号进行转义<br><span class="hljs-number">2.</span>利用单双引号交替使用<br><br>**对于一个字符串中有很多反斜杠**<br>可以使用 原始字符串（）在正则表达式中还有妙用<br>原始字符串的使用：只需要在字符串前边加一个英文字母r即可<br>在原始字符串的最后不能再多加一个反斜杠（\）<br></code></pre></td></tr></table></figure>
+
+<p><strong>如果要得到一个长字符串（不改变其换行格式）则需要三引号</strong></p>
+<p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20211103102432350.png"  ><span class="image-caption">image-20211103102432350</span></p>
+<h3 id="2-变量"><a href="#2-变量" class="headerlink" title="2.变量"></a>2.变量</h3><p>变量也可以不需要定义，直接赋值</p>
 <p>BIF == Built-in function（内置函数）</p>
+<p>变量名是把一个值赋值给一个名字时，将值存储在内存中，称之为变量，在大多数语言中也叫做“给变量赋值”或“把值存储在变量中”。但是Python更像是把名字贴在值的上边。</p>
+<p><strong>使用变量的时候需要注意的地方</strong>：</p>
+<ul>
+<li>使用变量前需要先对变量赋值</li>
+<li>变量名不能以数字开头</li>
+<li>等号（=）是赋值的意思，左边是名字，右边是值，千万不能写反</li>
+</ul>
+<p><strong>注意：</strong> Python中的关键字不能作为变量名，否则会被赋予一个新的意义，再使用会报错用新身份代替BIF</p>
+<h3 id="3-条件分支"><a href="#3-条件分支" class="headerlink" title="3.条件分支"></a>3.条件分支</h3><h4 id="比较操作符"><a href="#比较操作符" class="headerlink" title="比较操作符"></a>比较操作符</h4><p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20211103103018875.png"  ><span class="image-caption">image-20211103103018875</span></p>
+<h4 id="Python的条件分支语法"><a href="#Python的条件分支语法" class="headerlink" title="Python的条件分支语法"></a>Python的条件分支语法</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">if</span> 条件:<br>    条件为真（true）执行的操作<br><span class="hljs-keyword">else</span>:<br>    条件为假（false）执行的操作<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-while循环"><a href="#4-while循环" class="headerlink" title="4.while循环"></a>4.while循环</h3><h4 id="while循环语法"><a href="#while循环语法" class="headerlink" title="while循环语法"></a>while循环语法</h4><figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> 条件:<br>    条件为真（true）执行的操作<br></code></pre></td></tr></table></figure>
+
+<h4 id="Python中的and逻辑操作符"><a href="#Python中的and逻辑操作符" class="headerlink" title="Python中的and逻辑操作符"></a>Python中的and逻辑操作符</h4><p>and逻辑操作符可以将任意表达式连接在一起，并得到一个布尔类型的值</p>
+<p>（相当于“且”的关系，两边的式子全为真时才是true）</p>
+<h3 id="5-Python中的数据类型"><a href="#5-Python中的数据类型" class="headerlink" title="5.Python中的数据类型"></a>5.Python中的数据类型</h3><h4 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h4><p>包含有整型、浮点型、布尔类型</p>
+<p>整型是整数类型，也与长整型结合起来了，他的长度不受限制，只限制于计算机内存的总数</p>
+<p>浮点型是小数类型的数字</p>
+<p>布尔类型可以看做整数类型来计算</p>
+<p>e记法：科学计数法，用来表示数值特别大或特别小的数 e记法会使数字变为一个浮点型</p>
+<h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><p><img  src="https://gitee.com/liu-lull/typora/raw/master/typora/image-20211103215028304.png"  ><span class="image-caption">image-20211103215028304</span></p>
+<p>字符串中只有数字的时候才能够将字符串强制转换为整数</p>
+<p>如果是浮点数转换为整数，Python会采取截断处理（这样效率高），直接将小数点后的数字截取掉</p>
+<h4 id="获取类型的信息"><a href="#获取类型的信息" class="headerlink" title="获取类型的信息"></a>获取类型的信息</h4><p><code>type()</code>函数可以明确得知变量的类型</p>
+<p>更好的是使用<code>isinstance()</code>这个BIF，有两个参数，第一个参数是带确定类型的参数，第二个参数是指定一个参数类型，然后instance会返回一个布尔类型的值，true表示两个参数类型一致，false表示两个参数类型不一致</p>
+<h3 id="6-操作符"><a href="#6-操作符" class="headerlink" title="6.操作符"></a>6.操作符</h3><h4 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h4><h3 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h3><p>random模块中有一个randint()函数，此函数会返回一个随机的整数</p>
 ]]></content>
       <categories>
         <category>学习</category>
