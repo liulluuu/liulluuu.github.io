@@ -48,7 +48,44 @@
 <p>如果是浮点数转换为整数，Python会采取截断处理（这样效率高），直接将小数点后的数字截取掉</p>
 <h4 id="获取类型的信息"><a href="#获取类型的信息" class="headerlink" title="获取类型的信息"></a>获取类型的信息</h4><p><code>type()</code>函数可以明确得知变量的类型</p>
 <p>更好的是使用<code>isinstance()</code>这个BIF，有两个参数，第一个参数是带确定类型的参数，第二个参数是指定一个参数类型，然后instance会返回一个布尔类型的值，true表示两个参数类型一致，false表示两个参数类型不一致</p>
-<h3 id="6-操作符"><a href="#6-操作符" class="headerlink" title="6.操作符"></a>6.操作符</h3><h4 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h4><h3 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h3><p>random模块中有一个randint()函数，此函数会返回一个随机的整数</p>
+<h3 id="6-操作符"><a href="#6-操作符" class="headerlink" title="6.操作符"></a>6.操作符</h3><h4 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h4><p>特殊的：<code>%（求余数）</code>     <code>**（幂运算）</code>     <code>//（地板除法）</code></p>
+<p>Python3中除法是真实的除法，有小数也会写出小数，是个精确的值</p>
+<h4 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h4><p>对于-（负号）来说，有一个操作数时，是一元运算符</p>
+<p>比较操作符 &gt; 逻辑操作符</p>
+<p>幂运算符比其左侧的操作运算符优先级高，比其右侧的操作运算符优先级低</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">-<span class="hljs-number">3</span> ** <span class="hljs-number">2</span>  // -<span class="hljs-number">9</span> 即等于-(<span class="hljs-number">3</span> ** <span class="hljs-number">2</span>)<br><span class="hljs-number">3</span> ** -<span class="hljs-number">2</span>  // <span class="hljs-number">0.11111111111111</span> 即等于<span class="hljs-number">3</span> ** (-<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+
+<p>比较操作符根据值的真假来返回布尔类型的值</p>
+<p>逻辑操作符 <code>and</code>    <code>or</code>    <code>not</code></p>
+<p>从上到下，从左到右优先级依次递减</p>
+<ol>
+<li>幂运算 **</li>
+<li>正负号 +x  -x</li>
+<li>算术操作符  *  /  //  +  -</li>
+<li>比较操作符  &lt;  &lt;=  &gt;  &gt;=  ==  !=</li>
+<li>逻辑操作符 not  and  or</li>
+</ol>
+<h3 id="7-分支和循环"><a href="#7-分支和循环" class="headerlink" title="7.分支和循环"></a>7.分支和循环</h3><p><code>if-elif</code>的循环所消耗CPU的进程任务少于<code>if-else(if-else(...))</code>少于<code>if() if() if() ...</code></p>
+<h6 id="Python可以有效避免“悬挂else”"><a href="#Python可以有效避免“悬挂else”" class="headerlink" title="Python可以有效避免“悬挂else”"></a>Python可以有效避免“悬挂else”</h6><h4 id="条件表达式（三元操作符）"><a href="#条件表达式（三元操作符）" class="headerlink" title="条件表达式（三元操作符）"></a>条件表达式（三元操作符）</h4><p>可以使用一条语句同时来完成条件判断和赋值操作</p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">x <span class="hljs-keyword">if</span> 条件 <span class="hljs-keyword">else</span> y<br></code></pre></td></tr></table></figure>
+
+<p>例如：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python">x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> x &lt; y:<br>    small = x<br><span class="hljs-keyword">else</span>:<br>    small = y<br><br>改进=&gt;<br>small = <br></code></pre></td></tr></table></figure>
+
+<h4 id="断言（assert）"><a href="#断言（assert）" class="headerlink" title="断言（assert）"></a>断言（assert）</h4><p>实质上是if条件语句的近亲，当这个关键字后边的条件语句为假的时候，程序自动崩溃并抛出AssertionError的异常（自己崩溃）</p>
+<p>用他在程序中置入检查点，可以确保程序中某条件一定为真才能让程序正常工作，如果是正确的语句，则会忽略</p>
+<h3 id="8-循环"><a href="#8-循环" class="headerlink" title="8.循环"></a>8.循环</h3><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p>语法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">while</span> 条件:<br>    循环体<br></code></pre></td></tr></table></figure>
+
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><p>for循环是Python的计数器循环</p>
+<p>Python的for循环可以自动调用迭代器的next方法，会自动捕获stop的异常，并结束循环。</p>
+<p>语法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> 目标 <span class="hljs-keyword">in</span> 表达式:   //表达式可以是列表也可以是元祖<br>    循环体<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h3><p>random模块中有一个randint()函数，此函数会返回一个随机的整数</p>
 ]]></content>
       <categories>
         <category>学习</category>
