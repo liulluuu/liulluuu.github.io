@@ -83,9 +83,42 @@
 <p>语法：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> 目标 <span class="hljs-keyword">in</span> 表达式:   //表达式可以是列表也可以是元祖<br>    循环体<br></code></pre></td></tr></table></figure>
 
+<h4 id="range-函数"><a href="#range-函数" class="headerlink" title="range()函数"></a>range()函数</h4><p>语法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">range</span>([start,] stop[, step=<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
 
+<ul>
+<li>这个BIF有三个参数，用中括号括起来的两个表示两个参数可选</li>
+<li>如果只填一个参数，则默认从0开始</li>
+<li>step=1表示第三个参数的默认值为1</li>
+<li>函数的作用：生成一个从start参数的值开始到stop参数的值结束的数字序列</li>
+</ul>
+<h3 id="9-break和continue"><a href="#9-break和continue" class="headerlink" title="9.break和continue"></a>9.break和continue</h3><p>break - - &gt; 终止循环并跳出循环体</p>
+<p>continue - - &gt; 终止本轮循环并执行下一循环（在开始下一轮循环前会测试循环条件，条件为True会进行下一轮循环，如果是False会停止循环）</p>
+<p>例子：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">10</span>):<br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(i)<br>        <span class="hljs-keyword">continue</span><br>    i += <span class="hljs-number">2</span><br>    <span class="hljs-built_in">print</span>(i)<br><br>输出结果：<br><span class="hljs-number">2</span><br><span class="hljs-number">1</span><br><span class="hljs-number">4</span><br><span class="hljs-number">3</span><br><span class="hljs-number">6</span><br><span class="hljs-number">5</span><br><span class="hljs-number">8</span><br><span class="hljs-number">7</span><br><span class="hljs-number">10</span><br><span class="hljs-number">9</span><br><br>// 注意元祖的产生范围是从<span class="hljs-number">0</span>开始<br></code></pre></td></tr></table></figure>
 
-<h3 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h3><p>random模块中有一个randint()函数，此函数会返回一个随机的整数</p>
+<h3 id="10-random模块"><a href="#10-random模块" class="headerlink" title="10.random模块"></a>10.random模块</h3><p>random模块中有一个randint()函数，此函数会返回一个随机的整数</p>
+<h3 id="11-列表"><a href="#11-列表" class="headerlink" title="11.列表"></a>11.列表</h3><p>列表出于数组而强大于数组，如果说数组是一个集装箱，那么列表就是一个工厂或仓库了</p>
+<p>列表中的数据类型并没有进行限制，所以整数、浮点数、字符串、对象都可以往列表里放。</p>
+<h4 id="创建列表"><a href="#创建列表" class="headerlink" title="创建列表"></a>创建列表</h4><ul>
+<li>创建一个普通列表</li>
+<li>创建一个混合列表</li>
+<li>创建一个空列表</li>
+</ul>
+<p>创建列表就是想要进行存放的东西都能向列表中存放</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>member = [<span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-string">&#x27;小布丁&#x27;</span>, <span class="hljs-string">&#x27;黑夜&#x27;</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>member<br>[<span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-string">&#x27;小布丁&#x27;</span>, <span class="hljs-string">&#x27;黑夜&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>number = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><span class="hljs-meta">&gt;&gt;&gt; </span>number<br>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>mix = [<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-number">3.14</span>, [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>]]<br><span class="hljs-meta">&gt;&gt;&gt; </span>mix<br>[<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-number">3.14</span>, [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>empty = []<br><span class="hljs-meta">&gt;&gt;&gt; </span>empty<br>[]<br></code></pre></td></tr></table></figure>
+
+<h4 id="向列表里添加元素"><a href="#向列表里添加元素" class="headerlink" title="向列表里添加元素"></a>向列表里添加元素</h4><h5 id="方法一-append-方法"><a href="#方法一-append-方法" class="headerlink" title="方法一  append()方法"></a>方法一  append()方法</h5><p>调用<code>append()</code>方法的例子</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>member<br>[<span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-string">&#x27;小布丁&#x27;</span>, <span class="hljs-string">&#x27;黑夜&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span>member.append(<span class="hljs-string">&#x27;福禄娃娃&#x27;</span>)<br><span class="hljs-meta">&gt;&gt;&gt; </span>member<br>[<span class="hljs-string">&#x27;小甲鱼&#x27;</span>, <span class="hljs-string">&#x27;小布丁&#x27;</span>, <span class="hljs-string">&#x27;黑夜&#x27;</span>, <span class="hljs-string">&#x27;福禄娃娃&#x27;</span>]<br><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">len</span>(member)<br><span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+
+<p>调用append()方法的形式与一些方法是不一样的，例如len，以下便是原因</p>
+<p>append方法属于member列表的对象的，所以可以使用<code>.</code>的作域进行限制</p>
+<p>调用方法中的<code>.</code>意思可以是“范围”，在对象中把属于对象的函数称之为方法</p>
+<p><strong>自动追加到列表的末尾</strong></p>
+<h5 id="方法二-extend-方法"><a href="#方法二-extend-方法" class="headerlink" title="方法二  extend()方法"></a>方法二  extend()方法</h5><p>extend()方法是扩张的方式，调用需要参数</p>
+<p><strong>原理：</strong>用一个列表扩展另一个列表</p>
+<p><strong>自动追加到列表的末尾</strong></p>
+<h5 id="方法三-insert-方法"><a href="#方法三-insert-方法" class="headerlink" title="方法三  insert()方法"></a>方法三  insert()方法</h5><p>有两个参数，第一个参数</p>
 ]]></content>
       <categories>
         <category>学习</category>
